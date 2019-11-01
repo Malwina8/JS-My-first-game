@@ -1,0 +1,74 @@
+.container {
+  max-width: 1300px;
+  padding: 0 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+body {
+  font-family: "Comfortaa", cursive;
+  color: #F8EFBA;
+  background-color: #01a3a4;
+  font-weight: 700;
+}
+
+header {
+  text-align: center;
+}
+
+.flex {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.flex i {
+  font-size: 60px;
+  color: #fed136;
+  font-weight: bold;
+}
+
+.flex h1 {
+  font-family: 'Bowlby One SC', cursive;
+  letter-spacing: 1.8px;
+  font-size: 58px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  padding: 0 20px;
+  text-shadow: 1px 1px 4px #2d3436;
+}
+
+button {
+  padding: 12px 18px;
+  margin: 90px 8px 25px 8px;
+  font-size: 20px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  color: #2d3436;
+  background-color: #fed136;
+  font-weight: bold;
+  border-color: #fed136;
+  box-shadow: 1px 1px 4px #2d3436;
+}
+
+button:hover {
+  color: #fed136;
+  background-color: #006266;
+  border-color: #006266;
+  cursor: pointer;
+}
+
+#messages {
+  display: inline-block;
+  margin: 20px;
+  padding: 25px;
+  font-size: 30px;
+  border: 3px solid #fed136;
+  border-radius: 7px;
+  background-color: #006266;
+  text-shadow: 1px 1px 4px #2d3436;
+}
+/*# sourceMappingURL=style.css.map */
