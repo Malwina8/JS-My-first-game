@@ -1,8 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 .container {
   max-width: 1300px;
   padding: 0 20px;
   margin: 0 auto;
   text-align: center;
+  max-width: 90vh;
 }
 
 body {
@@ -14,6 +19,14 @@ body {
 
 header {
   text-align: center;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 20px;
 }
 
 .flex {
@@ -41,9 +54,65 @@ header {
   text-shadow: 1px 1px 4px #2d3436;
 }
 
+.roundScore {
+  margin-top: 70px !important;
+  position: relative;
+}
+
+.roundScore > h2 {
+  font-size: 33px;
+  font-weight: bold;
+  color: #fed136;
+}
+
+.roundScore > h3 {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.roundScore .flex {
+  padding: 0;
+  margin: 0;
+  font-size: 35px;
+  letter-spacing: 5px;
+}
+
+.roundScore h4 {
+  background-color: #006266;
+  padding: 10px;
+}
+
+.roundScore #comp-score,
+.roundScore #player-score {
+  font-size: 30px;
+}
+
+.roundScore #comp-move,
+.roundScore #user-move {
+  color: #fed136;
+}
+
+.roundScore .left {
+  position: absolute;
+  left: 60px;
+  top: 40px;
+  font-size: 30px;
+}
+
+.roundScore .right {
+  position: absolute;
+  right: 60px;
+  top: 40px;
+  font-size: 30px;
+}
+
+#buttons {
+  position: relative;
+}
+
 button {
   padding: 12px 18px;
-  margin: 90px 8px 25px 8px;
+  margin: 50px 8px 25px 8px;
   font-size: 20px;
   text-transform: uppercase;
   border-radius: 6px;
@@ -70,5 +139,61 @@ button:hover {
   border-radius: 7px;
   background-color: #006266;
   text-shadow: 1px 1px 4px #2d3436;
+}
+
+.score {
+  font-size: 30px;
+}
+
+.score > div {
+  padding: 70px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-flex: 0 0 32%;
+      flex: 0 0 32%;
+}
+
+#reset {
+  position: absolute;
+  left: 30px;
+  top: 210px;
+  background: none;
+  color: #F8EFBA;
+  box-shadow: none;
+  font-size: 17px;
+  padding: 8px 10px;
+}
+
+@media (max-width: 767px) {
+  #reset {
+    top: 240px;
+    left: 10px;
+  }
+  .flex i {
+    font-size: 45px;
+  }
+  .flex h1 {
+    font-size: 30px;
+    padding-left: 0;
+  }
+  .online {
+    font-size: 25px;
+  }
+  .roundScore h3 {
+    font-size: 20px;
+  }
+  .roundScore h2 {
+    font-size: 30px;
+  }
+  .roundScore .left {
+    left: 0;
+  }
+  .roundScore .right {
+    right: 0;
+  }
+  button {
+    margin-top: 90px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

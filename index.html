@@ -23,16 +23,36 @@
         <h1>scissors</h1>
       </div>
     </div>
-    <h1>online game</h1>
+    <h1 class="online">online game</h1>
   </header>
 	<div class="container">
+    <div class="roundScore">
+      <h2>Runda <span  id="round-number">1</span></h2>
+      <h3>Wygrane rundy</h3>
+      <div class="flex">
+        <h2 id="player-round">0</h2>
+        <h2>:</h2>
+        <h2 id="comp-round">0<h2>
+      </div>
+      <div class="left">
+        <h4>Gracz</h4>
+        <h3 id="player-score">0</h3>
+        <h3 id="user-move"></h3>
+      </div>
+      <div class="right">
+        <h4>Komputer</h4>
+        <h3 id="comp-score">0</h3>
+        <h3 id="comp-move"></h3>
+      </div>
+    </div>
 		<div id="buttons">
       <button id="play-rock" type="button" name="button">Kamień</button>
       <button id="play-paper" type="button" name="button">Papier</button>
       <button id="play-scissors" type="button" name="button">Nożyce</button>
+      <button id="reset" type="button" name="button">reset</button>
     </div>
-		<div id="messages"></div>
-	</div>
+		<div id="messages">Make your move !</div>
+  </div>  
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
 </body>

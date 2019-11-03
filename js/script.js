@@ -1,3 +1,18 @@
+let playerScore = 0;
+let compScore = 0;
+let playerRound = 0;
+let compRound = 0;
+let roundNumber = 1;
+let playerScore_h3 = document.getElementById('player-score');
+let compScore_h3 = document.getElementById('comp-score');
+let playerRound_h2 = document.getElementById('player-round');
+let compRound_h2 = document.getElementById('comp-round');
+let userMove = document.getElementById('user-move');
+let pcMove = document.getElementById('comp-move');
+let roundNumber_span = document.getElementById('round-number');
+
+// PLAY GAME
+
 function playGame(playerInput){
   clearMessages();
   function getMoveName(argMoveId) {
@@ -9,46 +24,26 @@ function playGame(playerInput){
     } else if (argMoveId == 3) {
         return 'nożyce';
     }
-
-    printMessage('Nie znam ruchu o id ' + argMoveId + '.');
-    return 'nieznany ruch';
   }
 
-  let randomNumber = Math.floor(Math.random() * 3 + 1);
 
-  console.log('Wylosowana liczba to: ' + randomNumber);
+let randomNumber = Math.floor(Math.random() * 3 + 1);
+console.log('Wylosowana liczba to: ' + randomNumber);
 
-  let computerMove = getMoveName(randomNumber);
-  console.log(computerMove);
 
-  printMessage('Ruch komputera: ' + computerMove);
-   /*
-  if (randomNumber == 1) {
-    computerMove = 'kamień';
-  } else if (randomNumber == 2) {
-   computerMove = "papier";
-  } else if (randomNumber == 3) {
-    computerMove  = "nożyce";
-  } */
+let computerMove = getMoveName(randomNumber);
+console.log(computerMove);
+pcMove.innerHTML = computerMove;
 
-  /* let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.'); */
 
-  console.log('Gracz wpisał: ' + playerInput);
+console.log('Gracz wpisał: ' + playerInput);
+let playerMove = getMoveName(playerInput);
+console.log(playerMove);
+userMove.innerHTML = playerMove;
 
-  let playerMove = getMoveName(playerInput);
-  console.log(playerMove);
-  /*
-  if (playerInput == '1') {
-    playerMove = 'kamień';
-  } else if (playerInput == '2') {
-    playerMove = 'papier';
-  } else if (playerInput == '3') {
-    playerMove = 'nożyce';
-  } */
+//RESULT
 
-  printMessage('Twój ruch to: ' + playerMove);
-
-  function displayResult(argComputerMove, argPlayerMove) {
+function displayResult(argComputerMove, argPlayerMove) {
     console.log('moves:', argComputerMove, argPlayerMove);
   if (argComputerMove == argPlayerMove) {
       printMessage('Remis!');
@@ -58,14 +53,38 @@ function playGame(playerInput){
       (argComputerMove == 'nożyce' && argPlayerMove == 'kamień')
     ) {
       printMessage('Ty wygrywasz!');
-    } else if (playerMove == 'nieznany ruch') {
-      printMessage('Nieznany ruch, wybierz ponownie');
+      ++playerScore;
+      playerScore_h3.innerHTML = playerScore;
+      if (playerScore == 3) {
+        playerScore = 0;
+        compScore = 0;
+        ++playerRound;
+        ++roundNumber;
+        playerRound_h2.innerHTML = playerRound;
+        messages.innerHTML = `Gracz wygrywa rundę!!`;
+        roundNumber_span.innerHTML = roundNumber;
+      }
     } else {
       printMessage('Komputer wygrywa!');
+      ++compScore;
+      compScore_h3.innerHTML = compScore;
+      if (compScore == 3) {
+        compScore = 0;
+        playerScore = 0;
+        ++compRound;
+        ++roundNumber;
+        compRound_h2.innerHTML = compRound;
+        messages.innerHTML = `Komputer wygrywa rundę!!`;
+        roundNumber_span.innerHTML = roundNumber;
+        console.log('roundnumber ' + roundNumber);
+      }
     }
+    score(playerScore, compScore);
   }
-  displayResult(computerMove, playerMove);
+    displayResult(computerMove, playerMove);
 }
+
+
 document.getElementById('play-rock').addEventListener('click', function(){
   playGame(1);
 });
@@ -74,4 +93,17 @@ document.getElementById('play-paper').addEventListener('click', function(){
 });
 document.getElementById('play-scissors').addEventListener('click', function(){
   playGame(3);
+});
+
+// RESET
+
+document.getElementById('reset').addEventListener('click', function(){
+  playerScore_h3.innerHTML = 0;
+  compScore_h3.innerHTML = 0;
+  playerRound_h2.innerHTML = 0;
+  compRound_h2.innerHTML = 0;
+  userMove.innerHTML = '';
+  pcMove.innerHTML = '';
+  roundNumber_span.innerHTML = 1;
+  resetAll(player,comp, round);
 });
