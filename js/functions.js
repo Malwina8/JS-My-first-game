@@ -26,8 +26,8 @@ function resetRound() {
 	playersRound(0, 0);
 }
 
-function rounds(round) {
-	document.getElementById('round-number').textContent = round;
+function rounds(roundNumber) {
+	document.getElementById('round-number').textContent = roundNumber;
 }
 
 function resetRounds() {

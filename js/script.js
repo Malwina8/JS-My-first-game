@@ -43,7 +43,8 @@ userMove.innerHTML = playerMove;
 
 //RESULT
 
-function displayResult(argComputerMove, argPlayerMove) {
+function
+displayResult(argComputerMove, argPlayerMove) {
     console.log('moves:', argComputerMove, argPlayerMove);
   if (argComputerMove == argPlayerMove) {
       printMessage('Remis!');
@@ -98,12 +99,12 @@ document.getElementById('play-scissors').addEventListener('click', function(){
 // RESET
 
 document.getElementById('reset').addEventListener('click', function(){
-  playerScore_h3.innerHTML = 0;
-  compScore_h3.innerHTML = 0;
-  playerRound_h2.innerHTML = 0;
-  compRound_h2.innerHTML = 0;
+  playerScore = 0;
+  compScore = 0;
+  playerRound = 0;
+  compRound = 0;
   userMove.innerHTML = '';
   pcMove.innerHTML = '';
-  roundNumber_span.innerHTML = 1;
-  resetAll(player,comp, round);
+  roundNumber = 1;
+  resetAll(playerRound, compRound, roundNumber);
 });

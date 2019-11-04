@@ -75,6 +75,8 @@ h4 {
   margin: 0;
   font-size: 35px;
   letter-spacing: 5px;
+  -ms-flex-direction: row;
+      flex-direction: row;
 }
 
 .roundScore h4 {
@@ -104,6 +106,11 @@ h4 {
   right: 60px;
   top: 40px;
   font-size: 30px;
+}
+
+.roundScore .center {
+  -ms-flex: 0 0 32%;
+      flex: 0 0 32%;
 }
 
 #buttons {
@@ -180,6 +187,10 @@ button:hover {
   .online {
     font-size: 25px;
   }
+  .roundScore .flex {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
   .roundScore h3 {
     font-size: 20px;
   }
@@ -188,9 +199,17 @@ button:hover {
   }
   .roundScore .left {
     left: 0;
+    -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
   }
   .roundScore .right {
     right: 0;
+    -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+  }
+  .roundScore .center {
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
   }
   button {
     margin-top: 90px;
