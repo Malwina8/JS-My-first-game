@@ -12,18 +12,20 @@ const playGame = function (playerInput){
     } else if (argMoveId == 3) {
         return 'nożyce';
     }
-    console.log('Wylosowana liczba to: ' + randomNumber);
-    console.log(computerMove);
-    console.log('Gracz wpisał: ' + playerInput);
-    console.log(playerMove);
-    document.getElementById('comp-move').innerHTML = computerMove;
-    document.getElementById('user-move').innerHTML = playerMove;
 
   }
+  let randomNumber = Math.floor(Math.random() * 3 + 1),
+        computerMove = getMoveName(randomNumber),
+        playerMove = getMoveName(playerInput);
+        
+  console.log('Wylosowana liczba to: ' + randomNumber);
+  console.log(computerMove);
+  console.log('Gracz wpisał: ' + playerInput);
+  console.log(playerMove);
+  document.getElementById('user-move').innerHTML = playerMove;
+  document.getElementById('comp-move').innerHTML = computerMove;
 
-const randomNumber = Math.floor(Math.random() * 3 + 1),
-      computerMove = getMoveName(randomNumber),
-      playerMove = getMoveName(playerInput);
+
 
 
 //RESULT

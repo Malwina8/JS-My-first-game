@@ -59,22 +59,14 @@ h4 {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-    > h2 {
-      font-size: 33px;
-      font-weight: bold;
-      color: $color-yellow;
-    }
-    > h3 {
-      margin: 0 auto;
-      padding: 0;
-    }
     h4 {
       background-color: #006266;
       padding: 10px;
     }
-    #comp-move,
-    #user-move {
+    #user-move,
+    #comp-move {
       color: $color-yellow;
+      font-size: 30px;
     }
     .left {
       flex: 0 0 32%;

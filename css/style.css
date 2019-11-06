@@ -63,25 +63,15 @@ h4 {
       flex-direction: row;
 }
 
-.roundScore > h2 {
-  font-size: 33px;
-  font-weight: bold;
-  color: #fed136;
-}
-
-.roundScore > h3 {
-  margin: 0 auto;
-  padding: 0;
-}
-
 .roundScore h4 {
   background-color: #006266;
   padding: 10px;
 }
 
-.roundScore #comp-move,
-.roundScore #user-move {
+.roundScore #user-move,
+.roundScore #comp-move {
   color: #fed136;
+  font-size: 30px;
 }
 
 .roundScore .left {
