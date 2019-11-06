@@ -56,27 +56,21 @@ h4 {
 }
 
 .roundScore {
-  margin-top: 70px!important;
-  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
     > h2 {
       font-size: 33px;
       font-weight: bold;
       color: $color-yellow;
     }
     > h3 {
-        margin: 0 auto;
-        padding: 0;
-    }
-    .flex {
+      margin: 0 auto;
       padding: 0;
-      margin: 0;
-      font-size: 35px;
-      letter-spacing: 5px;
-      flex-direction: row;
     }
     h4 {
-        background-color: #006266;
-        padding: 10px;
+      background-color: #006266;
+      padding: 10px;
     }
     #comp-score,
     #player-score  {
@@ -87,15 +81,11 @@ h4 {
       color: $color-yellow;
     }
     .left {
-      position: absolute;
-      left: 60px;
-      top: 40px;
+      flex: 0 0 32%;
       font-size: 30px;
     }
     .right {
-      position: absolute;
-      right: 60px;
-      top: 40px;
+      flex: 0 0 32%;
       font-size: 30px;
 
     }

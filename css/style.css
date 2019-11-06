@@ -55,8 +55,12 @@ h4 {
 }
 
 .roundScore {
-  margin-top: 70px !important;
-  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-direction: row;
+      flex-direction: row;
 }
 
 .roundScore > h2 {
@@ -68,15 +72,6 @@ h4 {
 .roundScore > h3 {
   margin: 0 auto;
   padding: 0;
-}
-
-.roundScore .flex {
-  padding: 0;
-  margin: 0;
-  font-size: 35px;
-  letter-spacing: 5px;
-  -ms-flex-direction: row;
-      flex-direction: row;
 }
 
 .roundScore h4 {
@@ -95,16 +90,14 @@ h4 {
 }
 
 .roundScore .left {
-  position: absolute;
-  left: 60px;
-  top: 40px;
+  -ms-flex: 0 0 32%;
+      flex: 0 0 32%;
   font-size: 30px;
 }
 
 .roundScore .right {
-  position: absolute;
-  right: 60px;
-  top: 40px;
+  -ms-flex: 0 0 32%;
+      flex: 0 0 32%;
   font-size: 30px;
 }
 

@@ -1,21 +1,22 @@
+{
 let playerScore = 0;
 let compScore = 0;
 let playerRound = 0;
 let compRound = 0;
 let roundNumber = 1;
-let playerScore_h3 = document.getElementById('player-score');
-let compScore_h3 = document.getElementById('comp-score');
-let playerRound_h2 = document.getElementById('player-round');
-let compRound_h2 = document.getElementById('comp-round');
-let userMove = document.getElementById('user-move');
-let pcMove = document.getElementById('comp-move');
-let roundNumber_span = document.getElementById('round-number');
+const playerScore_h3 = document.getElementById('player-score');
+const compScore_h3 = document.getElementById('comp-score');
+const playerRound_h2 = document.getElementById('player-round');
+const compRound_h2 = document.getElementById('comp-round');
+const userMove = document.getElementById('user-move');
+const pcMove = document.getElementById('comp-move');
+const roundNumber_span = document.getElementById('round-number');
 
 // PLAY GAME
 
-function playGame(playerInput){
+const playGame = function (playerInput){
   clearMessages();
-  function getMoveName(argMoveId) {
+  const getMoveName = function (argMoveId) {
     console.log('move:', argMoveId);
     if (argMoveId == 1) {
       return 'kamień';
@@ -108,3 +109,4 @@ document.getElementById('reset').addEventListener('click', function(){
   roundNumber = 1;
   resetAll(playerRound, compRound, roundNumber);
 });
+}
