@@ -79,11 +79,6 @@ h4 {
   padding: 10px;
 }
 
-.roundScore #comp-score,
-.roundScore #player-score {
-  font-size: 30px;
-}
-
 .roundScore #comp-move,
 .roundScore #user-move {
   color: #fed136;
@@ -104,6 +99,19 @@ h4 {
 .roundScore .center {
   -ms-flex: 0 0 32%;
       flex: 0 0 32%;
+}
+
+.roundScore .center > h2 {
+  padding: 10px 0 0 0;
+}
+
+.roundScore .center #player-score,
+.roundScore .center .score2 {
+  font-size: 40px;
+}
+
+.roundScore .center #player-score {
+  padding-right: 8px;
 }
 
 #buttons {

@@ -29,10 +29,10 @@ const randomNumber = Math.floor(Math.random() * 3 + 1),
 //RESULT
 
 const displayResult = function (argComputerMove, argPlayerMove) {
-    let playerScore_h3 = document.getElementById('player-score');
-    let compScore_h3 = document.getElementById('comp-score');
-    let playerRound_h2 = document.getElementById('player-round');
-    let compRound_h2 = document.getElementById('comp-round');
+    let playerScore_h2 = document.getElementById('player-score');
+    let compScore_span = document.getElementById('comp-score');
+    let playerRound_h3 = document.getElementById('player-round');
+    let compRound_h3 = document.getElementById('comp-round');
     let roundNumber_span = document.getElementById('round-number');
     console.log('moves:', argComputerMove, argPlayerMove);
   if (argComputerMove == argPlayerMove) {
@@ -44,26 +44,26 @@ const displayResult = function (argComputerMove, argPlayerMove) {
     ) {
       printMessage('Ty wygrywasz!');
       ++playerScore;
-      playerScore_h3.innerHTML = playerScore;
+      playerScore_h2.innerHTML = playerScore;
       if (playerScore == 3) {
         playerScore = 0;
         compScore = 0;
         ++playerRound;
         ++roundNumber;
-        playerRound_h2.innerHTML = playerRound;
+        playerRound_h3.innerHTML = playerRound;
         messages.innerHTML = `Gracz wygrywa rundę!!`;
         roundNumber_span.innerHTML = roundNumber;
       }
     } else {
       printMessage('Komputer wygrywa!');
       ++compScore;
-      compScore_h3.innerHTML = compScore;
+      compScore_span.innerHTML = compScore;
       if (compScore == 3) {
         compScore = 0;
         playerScore = 0;
         ++compRound;
         ++roundNumber;
-        compRound_h2.innerHTML = compRound;
+        compRound_h3.innerHTML = compRound;
         messages.innerHTML = `Komputer wygrywa rundę!!`;
         roundNumber_span.innerHTML = roundNumber;
         console.log('roundnumber ' + roundNumber);

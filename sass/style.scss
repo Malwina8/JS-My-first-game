@@ -72,10 +72,6 @@ h4 {
       background-color: #006266;
       padding: 10px;
     }
-    #comp-score,
-    #player-score  {
-      font-size: 30px;
-    }
     #comp-move,
     #user-move {
       color: $color-yellow;
@@ -91,6 +87,16 @@ h4 {
     }
     .center {
         flex: 0 0 32%;
+        > h2 {
+          padding: 10px 0 0 0;
+        }
+        #player-score,
+        .score2 {
+          font-size: 40px;
+        }
+        #player-score {
+          padding-right: 8px;
+        }
     }
 }
 
